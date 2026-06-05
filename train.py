@@ -3,6 +3,9 @@ from sklearn.ensemble import RandomForestClassifier
 import mlflow
 import mlflow.sklearn
 
+# Forzar una carpeta local compatible con GitHub Actions
+mlflow.set_tracking_uri("file:./mlruns")
+
 X, y = load_iris(return_X_y=True)
 
 model = RandomForestClassifier()
