@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: mlops-demo
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: mlops-demo
+
+  template:
+    metadata:
+      labels:
+        app: mlops-demo
+
+    spec:
+      containers:
+      - name: mlops-demo
+        image: mlops-demo
+        ports:
+        - containerPort: 5000
