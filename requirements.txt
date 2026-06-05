@@ -1,5 +1,3 @@
 scikit-learn
-mlflow
 numpy
 pandas
-sqlalchemy
